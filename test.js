@@ -17,3 +17,21 @@ function testAdd(){
 }
 
 testAdd();
+
+function shouter(whatToShout){
+	return whatToShout.toUpperCase+'!!!';
+}
+
+function testShouter(){
+	var whatToShout = 'hey,men';
+	var expected = 'HEY,MEN!!!';
+	if (shouter(whatToShout) === expected){
+		console.log('Success');
+		return true;
+	}
+
+	else{
+		console.log("Failure");
+		return false;
+	}
+}
