@@ -42,4 +42,3 @@ function sayBye(name){
 	return goodBye+name;
 }
 
-console.log(sayBye('Kay'));
