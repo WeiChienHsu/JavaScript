@@ -41,3 +41,19 @@ function saveDirectionInDatabase(direction) {
 }
 
 directionsLibrary.forEach(saveDirectionInDatabase);
+
+
+function isEven(num){
+	return num%2 ===0;
+}
+
+var myArray3 = [1,2,3,4,5,6,7,8];
+var evens = myArray3.filter(isEven);
+console.log(evens);
+
+function isEven(num) {
+  return num % 8 === 0;
+}
+
+var myNumbers = [1, 2, 3, 4, 5, 6];
+console.log(myNumbers.find(isEven));
