@@ -57,3 +57,13 @@ function isEven(num) {
 
 var myNumbers = [1, 2, 3, 4, 5, 6];
 console.log(myNumbers.find(isEven));
+
+
+function copyFirstHalf(array) {
+  if (array.length%2 === 0) {
+    return array.slice(0,array.length/2);
+  }
+}
+
+var array = ["red bull", "monster", "amp", "rockstar", "full throttle", "kickstart"];
+console.log(copyFirstHalf(array));
