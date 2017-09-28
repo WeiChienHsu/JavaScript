@@ -3,20 +3,13 @@ var input=prompt("new/list/delete/quit");
 
 while(input!="quit"){
 	if(input === "new"){
-		var newToDos = prompt("input new toDos:");
-		toDos.push(newToDos);
-		console.log("Add " + newToDos + " in lists.")	
+		newToDos();
 	}
 	else if(input ==="list"){
-		toDos.forEach(function(list,num){
-		console.log("*******");
-		console.log(num +". " + list);
-		})
+		inputToDos();
 	}
 	else if(input ==="delete"){
-		var index = prompt("Enter index of todo to delet")
-		toDos.splice(index,1);
-		console.log("deleted Todo");
+		deleteToDos();
 	}
 
 	input= prompt("new/list/delete/quit"); 
@@ -24,4 +17,23 @@ while(input!="quit"){
 
 }
 
-console.log("OK. You've quitted.")
+console.log("OK. You've quitted.");
+
+function newToDos(){
+		var newToDos = prompt("input new toDos:");
+		toDos.push(newToDos);
+		console.log("Add " + newToDos + " in lists.");	
+}
+
+function inputToDos(){
+		toDos.forEach(function(list,num){
+		console.log("*******");
+		console.log(num +". " + list);
+		})
+}
+
+function deleteToDos(){
+		var index = prompt("Enter index of todo to delet")
+		toDos.splice(index,1);
+		console.log("deleted Todo");
+}
