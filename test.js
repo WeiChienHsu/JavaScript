@@ -150,3 +150,17 @@ function kebabToSnake(str){
 console.log(kebabToSnake("hello-world"));
 
 
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+var colors = ["red","orange","yellow","green"];
+
+numbers.forEach(function(color){
+  if(color%3===0){
+    console.log(color);
+  }
+})
+
+function logNums(el, i, arr) {
+  console.log("This is the numeber " +i+"itme: " + el + " in the "+ arr);
+}
+ 
+[1,2,3].forEach(logNums);
