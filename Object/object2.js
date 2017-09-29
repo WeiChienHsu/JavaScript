@@ -30,6 +30,7 @@ var movieDB=[
 	}
 ]
 
+// Method1 - Using for loop
 function sen(obj){
 	return "You have "+obj[i].seen+" "+obj[i].movie+" - "+obj[i].point+" stars";
 }
@@ -37,3 +38,13 @@ function sen(obj){
 for(var i=0;i<4;i++){
 	console.log(sen(movieDB));
 	}
+
+// Method2 - Using forEach Method
+
+function sent(obj){
+	return "You have "+obj.seen+" "+obj.movie+" - "+obj.point+" stars";
+}
+
+movieDB.forEach(function(movie){
+	console.log(sent(movie));
+});
