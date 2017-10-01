@@ -17,17 +17,21 @@ var p = document.querySelector('p');
 var button = document.querySelector('button');
 var a = 0;
 
-button.addEventListener('click',function(){
-	console.log(a);
-	if(a === 0){
-	p.textContent = "I'was cliked by you ><";
-	p.classList.add("larger");
-	button.textContent ="Click to return";
-	a +=1;
+var p = document.querySelector('p');
+var button = document.querySelector('button');
+var start = 0;
+
+button.addEventListener("click",function(){
+	if(start == 0){
+		p.textContent = "Don't Click me!";
+		p.classList.add("larger");
+		button.textContent = "Return";
+		start += 1;
 	} else{
-		p.textContent ="Hey! Please Click the button!";
+		p.textContent = "Hey Please click me!";
 		p.classList.remove("larger");
-		button.textContent ="Click me!";
-		a -=1;
+		button.textContent = "Click me!";
+		start -= 1;
 	}
+
 })
