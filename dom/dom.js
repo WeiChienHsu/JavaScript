@@ -12,3 +12,8 @@ var forth = document.querySelector("#last");
 forth.style.color = "green";
 
 forth.textContent = "ABC";
+
+var link = document.getElementsByClassName("out-link")[0];
+
+link.setAttribute("href","http://www.amazon.com");
+link.textContent = "Amazon"
