@@ -4,11 +4,21 @@ var pointOne = 0;
 var pointTwo = 0;
 var winningPoint = 5; // compare to pointOne and pointTwo
 var gameOver = false; 
+var numInput = document.querySelector("input");
+var winningPointDisplay = document.querySelector(".playWin");
 // Select h1's wining output (When button clicked, plus one)
 buttonOne = document.getElementsByClassName("buttonOne")[0];
 buttonTwo = document.getElementsByClassName("buttonTwo")[0];
 buttonReset = document.getElementsByClassName("buttonReset")[0];
 // Select the button for wining (click it)
+
+numInput.addEventListener("change",function(){
+	winningPointDisplay.textContent = this.value;
+	winningPoint = Number(this.value);
+	reset();
+})
+
+// 
 buttonOne.addEventListener("click",function(){
 	if(!gameOver){
 	  pointOne+=1;
@@ -32,6 +42,10 @@ buttonTwo.addEventListener("click",function(){
 })
 
 buttonReset.addEventListener("click",function(){
+	reset();
+})
+
+function reset(){
 	pointTwo = 0;
 	pointOne = 0;
 	playerOne.textContent = pointOne;
@@ -39,6 +53,5 @@ buttonReset.addEventListener("click",function(){
 	playerOne.classList.remove("winner");
 	playerTwo.classList.remove("winner");
 	gameOver = false;
-})
-
+}
 // What happen after clicking button
