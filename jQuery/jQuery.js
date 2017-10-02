@@ -1,11 +1,7 @@
-$('button').click(function(){
-	$('body').css("background","yelow");
-	$('img').fadeOut(3000,function(){
-		$(this).remove();
-	});
-});
+$('div').css("background","purple");
+$('.highlight').css("width","200px");
 
-$('ul li').css("color",'red');
-$('.header').css("border","2px solid red");
-
-$('a')
+$("#third").click(function(){
+	$('#third').css("border","orange 1px solid");
+	$('div:first-of-type').css("color","pink");
+})
